@@ -6,6 +6,13 @@ from pykospacing import Spacing
 import keyboard, time
 import os
 import sys
+import uuid
+import hashlib
+
+def get_mac_address():
+    mac_num = hex(uuid.getnode()).replace('0x', '').upper()
+    mac = ''.join(mac_num[i: i + 2] for i in range(0, 11, 2))
+    return mac
 
 def resource_path(relative_path):
     try:
@@ -93,7 +100,13 @@ def main():
     keyboard.add_hotkey('ctrl+alt+f', lambda : summary())
 
 if __name__ == "__main__":
-    tts.start_speech(resource_path('programstart.mp3'))
-    main()
-    while cont:
-        pass
+    hash_object = hashlib.sha256(get_mac_address().encode())
+    hex_dig = hash_object.hexdigest()
+    f = open(resource_path("hash.txt"), 'r')
+    if (f.read() == str(hex_dig)):
+        tts.start_speech(resource_path('programstart.mp3'))
+        main()
+        while cont:
+            pass
+    else:
+        tts.start_speech(resource_path('hash.mp3'))
