@@ -177,6 +177,14 @@ MadCamp Week4 1분반
  ┣ 📜ttt.py
  ┗ 📜wait.mp3
 ```
-
+```
+#라이센스 발급
+pyinstaller --noconsole --onefile -n="BlindHelperLicense" --add-data "service_secret_key.json;." --add-data "error.mp3;." --add-data "get.mp3;." --add-data "getfinish.mp3;." check.py
+#데모 라이센스 발급
+pyinstaller --noconsole --onefile -n="Demo-BlindHelperLicense" --add-data "service_secret_key.json;." --add-data "error.mp3;." --add-data "get.mp3;." --add-data "getfinish.mp3;." check.py
+#BlindHelper 프로그램
+pyinstaller -n="BlindHelper" --icon="exefolder.ico" --noconsole --add-data "C:\\Users\\KIMSUWHAN\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pykospacing\\resources\\models\\kospacing;.\\pykospacing\\resources\\models" --add-data "C:\\Users\\KIMSUWHAN\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pykospacing\\resources\\dicts\\c2v.dic;.\\pykospacing\\resources\\dicts" --add-data "service_secret_key.json;." main.py
+실행 후 mp3 파일들 _internal 폴더에 추가
+```
   
 
