@@ -34,6 +34,7 @@ MadCamp Week4 1분반
 ## 1. License Program
 
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/Madweek4/madcamp_week4/assets/155048947/eed9dbf0-919e-4d4a-8a6b-d238023b4251">
+<br/><br/><br/>
 
 ***Major features***
 
@@ -62,8 +63,14 @@ MadCamp Week4 1분반
 ## 2. BlindHelper Program
 
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/Madweek4/madcamp_week4/assets/155048947/cdff5684-3b6d-4518-adec-23ff7caa8489">
+<br/>실행 화면
+<br/><br/><br/>
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/Madweek4/madcamp_week4/assets/155048947/cd9d5f29-ee29-49a1-8cc3-a38bd6123d6b">
+<br/>글자 추출 과정 시각화
+<br/><br/><br/>
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/Madweek4/madcamp_week4/assets/155048947/17f19dab-7cd8-4864-a566-3a021535b43e">
+<br/>글자 추출 과정 시각화(잘리는 부분 제거)
+<br/><br/><br/>
 
 
 ***Major features***
@@ -82,13 +89,15 @@ MadCamp Week4 1분반
 - 캡처가 시작되면 현재 화면에서 드래그하여 캡처 영역을 정할 수 있다. 드래그 영역은 노란색으로 표시하여 어느 부분을 캡처하는 지 인지할 수 있게 하였다.
 - 구글 클라우드 api를 통해 글자를 인식할 때 그룹별로 인식하여 그리드 형태의 사이트에서도 문맥에 맞게 글자를 인식할 수 있게 하였다.
 - 인식된 글자는 pykospacing 라이브러리를 통해 띄어쓰기를 적용하여 TTS가 읽을 때 자연스럽게 읽도록 구성했다.
-- '''pip install git+https://github.com/haven-jeon/PyKoSpacing.git'''
+- ```
+  pip install git+https://github.com/haven-jeon/PyKoSpacing.git```
 - 요약 기능이 시작되면 우선 구글 클라우드 api를 통해 캡처 이미지에서 이미지 컨텐츠들의 키워드들을 추출한다.
 - 이미지 키워드들을 추출할 때 confidence가 70% 이상인 키워드만 추출하여 정확도를 높였다.
 - 해당 키워드와 텍스트를 이용하여 chatgpt api가 요약한 후 이를 TTS로 출력한다.
 - 프롬프트를 구성할 때 텍스트만 있는 경우, 이미지만 있는 경우, 둘 다 있는 경우 세 가지로 나누어 프롬프트를 구성하여 자연스럽게 설명할 수 있도록 설계했다.
 - 이 프로그램도 license 프로그램과 마찬가지로 상대 주소를 사용하고, pyinstaller로 exe 파일을 만들었다.
-
+  <br/><br/><br/>
+  
 - 첫 번재 사진은 프로그램에서 캡처를 진행할 때의 화면을 나타낸 것이고, 두,세 번째 사진은 기술적으로 어떻게 인식된 글자를 가져오는 지 나타낸 사진이다.
 - 캡처를 시작할 때 화면에서 움직이는 부분들이 있기에 우선 전체 화면을 캡처한다.
 - 그 후에 구글 api를 통해 전체 화면에서 글자들을 인식하고 인식된 글자들의 좌표를 추출한다. 이를 보여준 것이 2,3번째 사진이다.
