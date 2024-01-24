@@ -2,7 +2,7 @@ import openai
 
 class OpenAIChat:
     def __init__(self):
-        openai.api_key = "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"
+        openai.api_key = "이거 openai api 키 넣기..."
         self.model = "gpt-4"
 
     def get_completion(self, prompt, temperature=0):
