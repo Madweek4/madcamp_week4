@@ -1,0 +1,50 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <style>
+        input[type=submit] {
+            font-size: 3vw;
+            text-align: center;
+            background-color: #ffe600;
+            /* 버튼의 배경색을 설정 */
+            color: #0022ff;
+            /* 버튼의 텍스트 색상을 설정 */
+            padding: 14px 20px;
+            /* 버튼 내부의 패딩을 설정 */
+            border: none;
+            /* 버튼의 테두리를 제거 */
+            cursor: pointer;
+            /* 마우스 커서를 포인터로 설정 */
+            width: 20%;
+            /* 버튼의 너비를 50%로 설정 */
+            margin-left: auto;
+            /* 버튼을 가운데 정렬하기 위해 왼쪽 마진을 자동으로 설정 */
+            margin-right: auto;
+            /* 버튼을 가운데 정렬하기 위해 오른쪽 마진을 자동으로 설정 */
+            display: block;
+            /* 버튼을 블록 요소로 설정하여 마진을 적용 */
+        }
+
+        input[type=text] {
+            padding: 14px 20px;
+            /* 버튼 내부의 패딩을 설정 */
+
+            font-size: 16px;
+        }
+    </style>
+    <title>Welcome to BlindHelper!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+
+<body>
+    <h1 style="font-size:3vw; color:#FFDB00;">SIGNUP PAGE</h1><br>
+    <input id="idinput" placeholder="id"></input><br>
+    <input id="pwinput" placeholder="password"></input><br>
+    <button id="signup">Submit</button><br>
+    <button id="gologin">go to LOGIN</button>
+    <script type="module" src="{{ url_for('static', filename='js/signup.js') }}"></script>
+</body>
+
+</html>

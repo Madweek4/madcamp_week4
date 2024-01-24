@@ -1,0 +1,33 @@
+<!-- main.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Welcome to BlindHelper!</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <style>
+        #pay-button,
+        #demo-button,
+        #demo-display,
+        #helper-download,
+        #license-download,
+        #demolicense-download {
+            display: none;
+        }
+    </style>
+    <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
+</head>
+
+<body>
+    <h1 style="font-size:3vw; color:#FFDB00;" >Welcome to BlindHelper!</h1>
+    <p id="id-display"></p><br>
+    <button id="pay-button">Pay for unlimited use!</button><br>
+    <button id="demo-button">Start demo version for free!</button><br>
+    <p id="demo-display"></p><br>
+    <button id="helper-download">BlindHelper.zip<br>DOWNLOAD</button><br>
+    <button id="license-download">BlindHelperLicense.exe<br>DOWNLOAD</button><br>
+    <button id="demolicense-download">Demo-BlindHelperLicense.exe<br>DOWNLOAD</button><br>
+    <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+
+</html>
