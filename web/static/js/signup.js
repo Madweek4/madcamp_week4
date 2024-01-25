@@ -5,6 +5,7 @@ const signup = document.getElementById('signup');
 const gotologin = document.getElementById('gotologin');
 
 window.onload = function () {
+    document.body.classList.remove('is-preload');
     let wherefrom = localStorage.getItem('from');
     if (wherefrom == "failsignup") {
         var audio = new Audio('static/audio/signup/failsignup.mp3');
@@ -16,6 +17,9 @@ window.onload = function () {
     }
     localStorage.removeItem('from');
 };
+
+window.ontouchmove = function () { return false; }
+window.onorientationchange = function () { document.body.scrollTop = 0; }
 
 signup.addEventListener('click', () => {
     let data = new FormData();

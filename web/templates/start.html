@@ -1,14 +1,44 @@
-<!-- index.html -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+	Aerial by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
-<head>
-    <title>Welcome to BlindHelper!</title>
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
-</head>
-<body>
-    <h1 style="font-size:3vw; color:#FFDB00;">Welcome to BlindHelper!</h1>
-    <button id="login">LOGIN</button><br>
-    <button id="signup">SIGNUP</button><br>
-    <script type="module" src="{{ url_for('static', filename='js/start.js') }}"></script>
-</body>
+	<head>
+		<title>BlindHelper</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="static/css/start.css" />
+		<noscript><link rel="stylesheet" href="static/css/start_noscript.css" /></noscript>
+		<script src="https://kit.fontawesome.com/f04dd41ef2.js" crossorigin="anonymous"></script>
+	</head>
+	<body class="is-preload">
+		<div id="wrapper">
+			<div id="bg"></div>
+			<div id="overlay"></div>
+			<div id="main">
+
+				<!-- Header -->
+					<header id="header">
+						<h1>Welcome to BlindHelper</h1>
+						<p>Inclusive &nbsp;&bull;&nbsp; Empowering &nbsp;&bull;&nbsp; Accessible</p>
+						<nav>
+							<ul>
+								<li><a href="#" id="login" class="fa-solid fa-right-to-bracket" onclick="event.preventDefault();"><span class="label">Facebook</span></a></li>
+								<li><a href="#" id="signup"  class="fa-solid fa-user-plus" onclick="event.preventDefault();"><span class="label">Twitter</span></a></li>
+								<li><a href="#" id="detail" class="fa-solid fa-circle-info" onclick="event.preventDefault();"><span class="label">Dribbble</span></a></li>
+							</ul>
+						</nav>
+					</header>
+
+				<!-- Footer -->
+					<footer id="footer">
+						<span class="copyright">&copy; <a href="https://github.com/Madweek4">MadCamp4 : KimSuHwan &nbsp;&bull;&nbsp; LeeHyungJin</a>.</span>
+					</footer>
+
+			</div>
+		</div>
+		<script type="module" src="{{ url_for('static', filename='js/start.js') }}"></script>
+	</body>
 </html>

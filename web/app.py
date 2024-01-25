@@ -149,6 +149,10 @@ def demoStart():
                 user_collection.update_one({'id' : user['id']}, {'$set': {'demo': current.strftime("%Y-%m-%d %H:%M:%S")}})
                 return {"success" : True}
         return {"success" : False}
+    
+@app.route('/detail', methods=['GET', 'POST'])
+def detail():
+    return render_template('detail.html')
 
 
 if __name__ == '__main__':

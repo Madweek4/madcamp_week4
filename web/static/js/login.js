@@ -5,6 +5,7 @@ const login = document.getElementById('login');
 const gotosignup = document.getElementById('gotosignup');
 
 window.onload = function () {
+    document.body.classList.remove('is-preload');
     let wherefrom = localStorage.getItem('from');
     if(wherefrom == "faillogin"){
         var audio = new Audio('static/audio/login/faillogin.mp3');
@@ -16,6 +17,10 @@ window.onload = function () {
     }
     localStorage.removeItem('from');
 };
+
+window.ontouchmove = function () { return false; }
+
+window.onorientationchange = function () { document.body.scrollTop = 0; }
 
 login.addEventListener('click', () => {
     let data = new FormData();
