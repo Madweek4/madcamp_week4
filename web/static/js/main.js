@@ -13,6 +13,7 @@ var IMP = window.IMP;
 IMP.init("imp42653145");
 
 window.onload = function () {
+    document.body.classList.remove('is-preload');
     let wherefrom = localStorage.getItem('from');
     if (wherefrom == 'suclogin') {
         var audio = new Audio('static/audio/login/suclogin.mp3');
@@ -49,11 +50,16 @@ window.onload = function () {
                         demoButton.style.display = 'inline-block';
                     }
                     else {
+                        let [datePart, timePart] = data.user.demo.split(' ');
+                        let date = new Date(datePart);
+                        date.setDate(date.getDate() + 3);
+                        let updatedDatePart = date.toISOString().slice(0,10);
+                        let updatedDateString = `${updatedDatePart} ${timePart}`;
                         helperDownload.style.display = 'inline-block';
                         demolicenseDownload.style.display = 'inline-block';
                         payButton.style.display = 'inline-block';
                         demoDisplay.style.display = 'inline-block';
-                        demoDisplay.innerText = "demo version due date : " + data.user.demo;
+                        demoDisplay.innerText = "demo version due date : " + updatedDateString;
                     }
                 }
 
@@ -68,6 +74,9 @@ window.onload = function () {
     localStorage.removeItem('from');
 };
 
+window.ontouchmove = function () { return false; }
+
+window.onorientationchange = function () { document.body.scrollTop = 0; }
 
 payButton.addEventListener('click', () => {
     var audio = new Audio('static/audio/main/pay.mp3');

@@ -10,6 +10,7 @@ ca = certifi.where()
 client = MongoClient('mongodb+srv://dlgudwls8184:NeTSWJRhf3bF7yIe@cluster0.escpqml.mongodb.net/', tlsCAFile = ca)
 db = client['BlindHelper']
 user_collection = db['User']
+contributor_collection = db['Contributor']
 
 
 def get_mac_address():
@@ -82,10 +83,15 @@ def certify():
         print(password)
         print(mac)
         user = user_collection.find_one({'id' : id, 'password' : password})
-        if user:
-            new_result = user_collection.update_one({'id' : id}, {'$set': {'mac': mac}})
-            return {"success" : True}
-        else: return {"success" : False}
+        if user == None:
+            return {"success" : False} ##등록되지 않은 계정
+        if user['ispaid'] == False:
+            if user['demo'] != "":
+                new_result = user_collection.update_one({'id' : id}, {'$set': {'mac': mac}})
+                return {"success" : True}
+            return {"success" : False}
+        new_result = user_collection.update_one({'id' : id}, {'$set': {'mac': mac}})
+        return {"success" : True}
 
 @app.route('/getmac', methods=['GET', 'POST'])
 def getMac():
@@ -134,6 +140,19 @@ def pay():
                 user_collection.update_one({'id' : user['id']}, {'$set': {'ispaid': True}})
                 return {"success" : True}
         return {"success" : False}
+    
+@app.route('/donate', methods=['GET', 'POST'])
+def donate():
+    if request.method == 'POST':
+        print("donate 들어옴")
+        name = request.form['name']
+        amount = request.form['amount']
+        cont = contributor_collection.find_one({'name' : name})
+        if cont:
+            contributor_collection.update_one({'name' : name}, {'$set': {'amount': amount}}) ## 더하는거로 수정 필요
+        else:
+            contributor_collection.insert_one({'name' : name, 'amount' : amount})
+        return {"success" : True}
     
 @app.route('/demostart', methods=['GET', 'POST'])
 def demoStart():

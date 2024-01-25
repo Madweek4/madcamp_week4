@@ -11,7 +11,10 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
     <link rel="stylesheet" href="static/css/start.css" />
-    <noscript><link rel="stylesheet" href="static/css/start_noscript.css" /></noscript>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <noscript>
+        <link rel="stylesheet" href="static/css/start_noscript.css" />
+    </noscript>
     <script src="https://kit.fontawesome.com/f04dd41ef2.js" crossorigin="anonymous"></script>
 </head>
 
@@ -20,23 +23,26 @@
         <div id="bg"></div>
         <div id="overlay"></div>
         <div id="main">
-            
-                <div style="margin-top: 6vw; display: inline-block; padding-top: 6vw; padding: 4vw; background-color: rgb(0, 0, 0, 0.3); backdrop-filter: blur(4px);">
-                    <h2 style="font-size: 5vw; margin-bottom: 7vw; font-weight: bold;">Login</h2>
-                
-                    <p style="margin-bottom: 2vw;"><input id="idinput" type="text"
-                            style="color: white; border-radius: 15px; width: 30vw; height: 10vh; font-size: 5vh; background-color: transparent;"
-                            placeholder="id"></p>
-                    <p style="margin-bottom: 2vw;"><input id="pwinput" type="password"
-                            style="color: white; border-radius: 15px; width: 30vw; height: 10vh; font-size: 5vh; background-color: transparent;"
-                            placeholder="password"></p>
-                    <p><button id="login" style="color: white; border-radius: 15px; width: 30vw; height: 10vh; font-size: 3vh; background-color: transparent;">Submit</button></p>
 
-                </div>
+            <div
+                style="margin-top: 6vw; display: inline-block; padding-top: 6vw; padding: 4vw; background-color: rgb(0, 0, 0, 0.3); backdrop-filter: blur(4px); border-radius: 25px;">
+                <h2 style="font-size: 5vw; margin-bottom: 7vw; font-weight: bold;">Login</h2>
+
+                <p style="margin-bottom: 2vw;"><input id="idinput" type="text"
+                        style="color: white; border-radius: 15px; width: 30vw; height: 10vh; font-size: 5vh; background-color: transparent;"
+                        placeholder="id"></p>
+                <p style="margin-bottom: 2vw;"><input id="pwinput" type="password"
+                        style="color: white; border-radius: 15px; width: 30vw; height: 10vh; font-size: 5vh; background-color: transparent;"
+                        placeholder="password"></p>
+                <p><button id="login"
+                        class="b">Submit</button>
+                </p>
+
+            </div>
 
 
 
-            
+
 
         </div>
     </div>

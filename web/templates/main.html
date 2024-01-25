@@ -1,10 +1,21 @@
-<!-- main.html -->
-<!DOCTYPE html>
+<!DOCTYPE HTML>
+<!--
+   Aerial by HTML5 UP
+   html5up.net | @ajlkn
+   Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
 <html>
 
 <head>
-    <title>Welcome to BlindHelper!</title>
+    <title>BlindHelper</title>
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/style.css') }}">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <link rel="stylesheet" href="static/css/start.css" />
+    <noscript>
+        <link rel="stylesheet" href="static/css/start_noscript.css" />
+    </noscript>
+    <script src="https://kit.fontawesome.com/f04dd41ef2.js" crossorigin="anonymous"></script>
     <style>
         #pay-button,
         #demo-button,
@@ -18,15 +29,26 @@
     <script src="https://cdn.iamport.kr/v1/iamport.js"></script>
 </head>
 
-<body>
-    <h1 style="font-size:3vw; color:#FFDB00;" >Welcome to BlindHelper!</h1>
-    <p id="id-display"></p><br>
-    <button id="pay-button">Pay for unlimited use!</button><br>
-    <button id="demo-button">Start demo version for free!</button><br>
-    <p id="demo-display"></p><br>
-    <button id="helper-download">BlindHelper.zip<br>DOWNLOAD</button><br>
-    <button id="license-download">BlindHelperLicense.exe<br>DOWNLOAD</button><br>
-    <button id="demolicense-download">Demo-BlindHelperLicense.exe<br>DOWNLOAD</button><br>
+<body class="is-preload">
+    <div id="wrapper">
+        <div id="bg"></div>
+        <div id="overlay"></div>
+        <div id="main">
+            <div
+                style="padding-bottom: 1vw; margin-top: 6vw; display: inline-block; padding-top: 6vw; padding-left: 4vw; padding-right: 4vw; background-color: rgb(0, 0, 0, 0.3); backdrop-filter: blur(4px); border-radius: 25px;">
+                <h1 style="font-size:3vw; color: white; font-weight: bold; margin-bottom: 1vh;">Welcome to BlindHelper!</h1>
+                <p id="id-display"></p><br>
+                <button class="a" id="pay-button">Pay for unlimited use!</button><br>
+                <button class="a" id="demo-button">Start demo version for free!</button><br>
+                <p id="demo-display"></p><br>
+                <button class="a" id="helper-download">BlindHelper.zip<br>DOWNLOAD</button><br>
+                <button class="a" id="license-download">BlindHelperLicense.exe<br>DOWNLOAD</button><br>
+                <button class="a" id="demolicense-download">Demo-BlindHelperLicense.exe<br>DOWNLOAD</button><br>
+            </div>
+
+
+        </div>
+    </div>
     <script type="module" src="{{ url_for('static', filename='js/main.js') }}"></script>
 </body>
 

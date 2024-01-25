@@ -69,9 +69,9 @@
 				<h2>Who We Are</h2>
 			</header>
 			<p>We are a duo of KAIST computer science students.
-				As I participated in Mad Camp 2023, my interest in improving accessibility
-				for the blind was shared, and I started a project that fits this cause. This
-				led to the development of BlindHelper.</p>
+				Participating in Mad Camp 2023, our interest in improving accessibility
+				for the blind was shared, and we started this project. This
+				led us to the development of BlindHelper.</p>
 		</div>
 		<a href="#work" class="button style2 down anchored">Next</a>
 	</section>
@@ -81,7 +81,9 @@
 		<div class="content">
 			<header>
 				<h2>How to use</h2>
-				<p>Ctrl + alt + q : Enter capture mode<br>
+				<p>You should get License with BlindHelperLicense.exe<br>
+					Then, you can use BlindHelper.exe<br>
+					Ctrl + alt + q : Enter capture mode<br>
 					Click anywhere in capture mode: Cancel capture mode<br>
 					Drag in Capture Mode: Specify Zone<br>
 					Ctrl + alt + w : Cancel description<br>
@@ -127,10 +129,15 @@
 				<h2>Donate us</h2>
 				<p>Your help can contribute to the convenience of the blind.</p>
 			</header>
-			<ul style="margin-bottom: 5vw;" class="actions special">
-				<li><input id="donate" type="submit" value="Donate" /></li>
-			</ul>
-
+			<div class="box">
+				<div class="fields">
+					<div class="field half"><input id="name" type="text" name="name" placeholder="Your Name" /></div>
+					<div class="field half"><input id="amount" type="text" name="amount" placeholder="Amount(won)" /></div>
+				</div>
+				<ul style="margin-bottom: 5vw;" class="actions special">
+					<li><input id="donate" type="submit" value="Donate" /></li>
+				</ul>
+			</div>
 		</div>
 	</section>
 
@@ -164,7 +171,7 @@
 	<script src="static/js/detail/breakpoints.min.js"></script>
 	<script src="static/js/detail/util.js"></script>
 	<script src="static/js/detail/main.js"></script>
-	<script src="static/js/detail/donate.js"></script>
+	<script type="module" src="static/js/detail/donate.js"></script>
 
 </body>
 
