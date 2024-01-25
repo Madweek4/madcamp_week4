@@ -8,45 +8,63 @@ MadCamp Week4 1분반
 - 시각 장애인의 90%는 색깔을 구분할 수 있고 노란색을 가장 잘 보기 때문에 웹과 실행파일 gui를 만들 때 노란색을 주로 사용하였다.
 - 이 프로그램은 시각 장애 중 시력 및 시야 장애를 가진 분들을 타겟으로 하였고, 인터넷을 사용할 때 특정 부분에 대한 설명을 해줄 수 있도록 구성하였다.
 
-## a. 개발 팀원
+## 1. 개발 팀원
 
 - 김수환 - KAIST 전산학부(수리과학과) 22학번
 - 이형진 - KAIST 전산학부 22학번
 
-## b. 개발환경
+## 2. 개발환경
 
 - Language: JavaScript, HTML, CSS, Python
 - Server: Flask
 - DataBase: MongoDB
 - IDE: Visual Studio code 
 
-## c. WEB
+## 3. WEB
 
-### 1 - 시작 페이지
+### a - 시작 페이지
 
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/be666f35-04b5-40a7-9cb0-ef6bcfd6219b">
 
 ***Major features***
 
 - BlindHelper와 License Program을 배포하기 위한 사이트이다.
-- 시각 장애인들이 잘 인식하는 노란색으로 버튼 등을 구성했다.
-- DOWNLOAD를 누르면 BlindHelper.zip파일을 다운로드 가능하다. 하지만 라이선스 발급 없이는 사용 불가능하다.
+- 화면 중앙의 버튼 3개는 차례대로 로그인, 회원가입, 디테일 보기 버튼이다.
 
-### 2 - 로그인/회원가입 페이지
+### b - 로그인/회원가입 페이지
+
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/1340b33c-a1d1-4a57-97a0-5084a249b156">
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/e78c8fe0-d4a8-44a9-b5f7-c107b2b4e2b4">
 
 ***Major features***
 
-- 로그인을 하거나 회원가입을 통해 계정을 생성하고 MAIN페이지로 이동가능하다.
+- 로그인을 하거나 회원가입을 통해 계정을 생성하고 다운로드 페이지로 이동가능하다.
 
-### 3 - 메인 페이지
+### c - 디테일 페이지
+
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/d5429cd2-89a4-4107-9e33-2eb3e6c0ebf3">
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/51643831-9707-4d29-b55a-d77d86b71c1d">
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/82f28f85-b8c3-4a78-bba6-ee2b4d670387">
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/50436a75-64ef-4de5-8901-cda8d21a270d">
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/427d22c0-1596-431a-9851-74cec1cd1336">
+
+***Major features***
+
+- 우리 팀, 프로그램, 사용법, 더 많은 정보, 후원에 관한 정보를 설명하는 페이지이다.
+- 애니메이션을 적용하여 부드럽게 움직이는 듯한 느낌을 구현했다.
+
+### d - 다운로드 페이지
+
+<img width="1280" alt="image" src="https://github.com/Madweek4/madcamp_week4/assets/82389577/ca8b9c9e-b427-4dd4-9c79-7c830e308859">
 
 ***Major features***
 
 - 결제를 하면 BlindHelper를 사용이 가능하다.
 - 데모 버전은 버튼을 누른 시점 기준으로 3일동안 무료로 BlindHelper의 모든 기능을 체험할 수 있다.
 
-## d. EXE PROGRAM
+## 4. EXE PROGRAM
 
-### 1. License Program
+### a - License Program
 
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/Madweek4/madcamp_week4/assets/155048947/eed9dbf0-919e-4d4a-8a6b-d238023b4251">
 <br/><br/><br/>
@@ -75,7 +93,7 @@ MadCamp Week4 1분반
     return os.path.join(base_path, relative_path)
   ```
 
-### 2. BlindHelper Program
+### b - BlindHelper Program
 
 <img width="961" alt="chrome_cSLdJfE6SP" src="https://github.com/Madweek4/madcamp_week4/assets/155048947/cdff5684-3b6d-4518-adec-23ff7caa8489">
 <br/>실행 화면
@@ -104,7 +122,6 @@ MadCamp Week4 1분반
 - 캡처가 시작되면 현재 화면에서 드래그하여 캡처 영역을 정할 수 있다. 드래그 영역은 노란색으로 표시하여 어느 부분을 캡처하는 지 인지할 수 있게 하였다.
 - 구글 클라우드 api를 통해 글자를 인식할 때 서로 가까이 있는 글자들을 한 그룹으로 인식하여 그리드 형태의 사이트에서도 문맥에 맞게 글자를 인식할 수 있게 하였다.
 - 인식된 글자는 pykospacing 라이브러리를 통해 띄어쓰기를 적용하여 TTS가 읽을 때 자연스럽게 읽도록 구성했다.
-- TTS의 실행을 새로운 스레드에서 실행하여 음성 파일이 출력되는 동안 다른 기능을 수행할 수 있도록 구성했다.
 - ```
   pip install git+https://github.com/haven-jeon/PyKoSpacing.git```
 - 요약 기능이 시작되면 우선 구글 클라우드 api를 통해 캡처 이미지에서 이미지 컨텐츠들의 키워드들을 추출한다.
@@ -122,7 +139,7 @@ MadCamp Week4 1분반
 - 이런 식으로 설계하여 글자가 잘렸을 때에도 제대로 글자를 추출할 수 있도록 만들었다. 
 
 
-## e. DIRECTORY STRUCTURE
+## 5. DIRECTORY STRUCTURE
 ```
 #라이센스 프로그램
 📦test
@@ -187,5 +204,3 @@ pyinstaller --noconsole --onefile -n="Demo-BlindHelperLicense" --add-data "servi
 pyinstaller -n="BlindHelper" --icon="exefolder.ico" --noconsole --add-data "C:\\Users\\KIMSUWHAN\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pykospacing\\resources\\models\\kospacing;.\\pykospacing\\resources\\models" --add-data "C:\\Users\\KIMSUWHAN\\AppData\\Local\\Programs\\Python\\Python310\\Lib\\site-packages\\pykospacing\\resources\\dicts\\c2v.dic;.\\pykospacing\\resources\\dicts" --add-data "service_secret_key.json;." main.py
 실행 후 mp3 파일들 _internal 폴더에 추가
 ```
-  
-
