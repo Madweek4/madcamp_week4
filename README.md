@@ -143,7 +143,7 @@ MadCamp Week4 1분반
 ## 5. DIRECTORY STRUCTURE
 ```
 #라이센스 프로그램
-📦test
+📦BlindHelperLicense
  ┣ 📂__pycache__
  ┃ ┗ 📜TTS.cpython-310.pyc
  ┣ 📜check.py 
@@ -155,7 +155,7 @@ MadCamp Week4 1분반
 ```
 ```
 #BlindHelper 프로그램
-📦newexe
+📦BlindHelper
  ┣ 📂__pycache__
  ┃ ┣ 📜ImageLabeler.cpython-310.pyc
  ┃ ┣ 📜ImageLabeler.cpython-38.pyc
@@ -195,6 +195,109 @@ MadCamp Week4 1분반
  ┣ 📜TTS.py
  ┣ 📜ttt.py
  ┗ 📜wait.mp3
+```
+```
+#웹서버/클라이언트
+📦web
+ ┣ 📂static
+ ┃ ┣ 📂audio
+ ┃ ┃ ┣ 📂login
+ ┃ ┃ ┃ ┣ 📜faillogin.mp3
+ ┃ ┃ ┃ ┣ 📜login.mp3
+ ┃ ┃ ┃ ┗ 📜suclogin.mp3
+ ┃ ┃ ┣ 📂main
+ ┃ ┃ ┃ ┣ 📜demo.mp3
+ ┃ ┃ ┃ ┣ 📜downexe.mp3
+ ┃ ┃ ┃ ┣ 📜downexedemo.mp3
+ ┃ ┃ ┃ ┣ 📜downzip.mp3
+ ┃ ┃ ┃ ┣ 📜pay.mp3
+ ┃ ┃ ┃ ┗ 📜sucpay.mp3
+ ┃ ┃ ┣ 📂root
+ ┃ ┃ ┃ ┗ 📜welcome.mp3
+ ┃ ┃ ┗ 📂signup
+ ┃ ┃ ┃ ┣ 📜failsignup.mp3
+ ┃ ┃ ┃ ┣ 📜signup.mp3
+ ┃ ┃ ┃ ┗ 📜sucsignup.mp3
+ ┃ ┣ 📂css
+ ┃ ┃ ┣ 📂detail_images
+ ┃ ┃ ┃ ┣ 📂fulls
+ ┃ ┃ ┃ ┃ ┣ 📜01.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜02.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜03.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜04.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜05.jpg
+ ┃ ┃ ┃ ┃ ┗ 📜06.jpg
+ ┃ ┃ ┃ ┣ 📂thumbs
+ ┃ ┃ ┃ ┃ ┣ 📜01.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜02.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜03.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜04.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜05.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜06.jpg
+ ┃ ┃ ┃ ┃ ┣ 📜notion01.png
+ ┃ ┃ ┃ ┃ ┣ 📜notion02.png
+ ┃ ┃ ┃ ┃ ┣ 📜notion03.png
+ ┃ ┃ ┃ ┃ ┗ 📜notion04.png
+ ┃ ┃ ┃ ┣ 📜arrow.svg
+ ┃ ┃ ┃ ┣ 📜dark-arrow.svg
+ ┃ ┃ ┃ ┣ 📜intro.jpg
+ ┃ ┃ ┃ ┣ 📜one.jpg
+ ┃ ┃ ┃ ┣ 📜overlay.png
+ ┃ ┃ ┃ ┣ 📜poptrox-closer.svg
+ ┃ ┃ ┃ ┣ 📜poptrox-nav.svg
+ ┃ ┃ ┃ ┗ 📜two.jpg
+ ┃ ┃ ┣ 📂start_images
+ ┃ ┃ ┃ ┣ 📂ie
+ ┃ ┃ ┃ ┃ ┣ 📜footer.png
+ ┃ ┃ ┃ ┃ ┗ 📜footer.svg
+ ┃ ┃ ┃ ┣ 📜bg.jpg
+ ┃ ┃ ┃ ┣ 📜overlay-pattern.png
+ ┃ ┃ ┃ ┗ 📜overlay.svg
+ ┃ ┃ ┣ 📜detail.css
+ ┃ ┃ ┣ 📜detail_noscript.css
+ ┃ ┃ ┣ 📜start.css
+ ┃ ┃ ┣ 📜start_noscript.css
+ ┃ ┃ ┗ 📜style.css
+ ┃ ┣ 📂js
+ ┃ ┃ ┣ 📂detail
+ ┃ ┃ ┃ ┣ 📜breakpoints.min.js
+ ┃ ┃ ┃ ┣ 📜browser.min.js
+ ┃ ┃ ┃ ┣ 📜donate.js
+ ┃ ┃ ┃ ┣ 📜jquery.min.js
+ ┃ ┃ ┃ ┣ 📜jquery.poptrox.min.js
+ ┃ ┃ ┃ ┣ 📜jquery.scrollex.min.js
+ ┃ ┃ ┃ ┣ 📜jquery.scrolly.min.js
+ ┃ ┃ ┃ ┣ 📜main.js
+ ┃ ┃ ┃ ┗ 📜util.js
+ ┃ ┃ ┣ 📜login.js
+ ┃ ┃ ┣ 📜main.js
+ ┃ ┃ ┣ 📜signup.js
+ ┃ ┃ ┣ 📜start.js
+ ┃ ┃ ┗ 📜url.js
+ ┃ ┗ 📂webfonts
+ ┃ ┃ ┣ 📜fa-brands-400.eot
+ ┃ ┃ ┣ 📜fa-brands-400.svg
+ ┃ ┃ ┣ 📜fa-brands-400.ttf
+ ┃ ┃ ┣ 📜fa-brands-400.woff
+ ┃ ┃ ┣ 📜fa-brands-400.woff2
+ ┃ ┃ ┣ 📜fa-regular-400.eot
+ ┃ ┃ ┣ 📜fa-regular-400.svg
+ ┃ ┃ ┣ 📜fa-regular-400.ttf
+ ┃ ┃ ┣ 📜fa-regular-400.woff
+ ┃ ┃ ┣ 📜fa-regular-400.woff2
+ ┃ ┃ ┣ 📜fa-solid-900.eot
+ ┃ ┃ ┣ 📜fa-solid-900.svg
+ ┃ ┃ ┣ 📜fa-solid-900.ttf
+ ┃ ┃ ┣ 📜fa-solid-900.woff
+ ┃ ┃ ┗ 📜fa-solid-900.woff2
+ ┣ 📂templates
+ ┃ ┣ 📜detail.html
+ ┃ ┣ 📜login.html
+ ┃ ┣ 📜main.html
+ ┃ ┣ 📜main2.html
+ ┃ ┣ 📜signup.html
+ ┃ ┗ 📜start.html
+ ┗ 📜app.py
 ```
 ```
 #라이센스 발급
